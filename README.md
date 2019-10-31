@@ -1,2 +1,5 @@
 # Ohjelmistotekniikka <h1>
-Harjoitustyö *viikko 1* **tehtävät**
+  # Tehtävät <h2>
+  # Viikko 1 <h3>
+  
+  [GitHub](http://github.com)
