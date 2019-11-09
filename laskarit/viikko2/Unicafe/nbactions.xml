@@ -7,4 +7,11 @@
                 <goal>jacoco:report</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-testikattavuusjacoco</actionName>
+            <displayName>testikattavuusjacoco</displayName>
+            <goals>
+                <goal>jacoco:report</goal>
+            </goals>
+        </action>
     </actions>
