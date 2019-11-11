@@ -9,4 +9,5 @@
   ### Viikko 2
   
   [testikattavuus.png](https://github.com/jjkolari/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuus.png)
-  [vaativuusmaarittely.md](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/vaativuusmaarittely.md)
+  
+  [vaatimusmaarittely.md](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
