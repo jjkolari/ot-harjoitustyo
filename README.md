@@ -10,4 +10,6 @@
   
   [testikattavuus.png](https://github.com/jjkolari/ot-harjoitustyo/blob/master/laskarit/viikko2/testikattavuus.png)
   
-  [vaatimusmaarittely.md](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
+  [vaatimusmäärittely](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
+  
+  [tuntikirjanpito](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
