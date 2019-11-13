@@ -18,3 +18,5 @@
   ### Viikko 3
   
   [T1&2 Monopoly](https://github.com/jjkolari/ot-harjoitustyo/blob/master/laskarit/viikko3/monopoly-luokkakaavio.jpg)
+  
+  [T3 Drive()](https://github.com/jjkolari/ot-harjoitustyo/blob/master/laskarit/viikko3/machinesekvenssikaava.png)
