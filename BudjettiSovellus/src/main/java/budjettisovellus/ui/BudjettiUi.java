@@ -15,17 +15,18 @@ public class BudjettiUi extends Application {
     
     private Balance balance;
     
-    public void BudjettiUi() {
+    @Override
+    public void init() throws Exception {
+        balance = new Balance();
         //seuraava steppi on lisätä mahdollisuus yksilölliseen budjettii
         //jolloin tämä kohta muuttuu / kehittyy
     }
 
     @Override
     public void start(Stage stage) {
-        balance = new Balance();
         //tulossa login-näkymä
         BorderPane pane = new BorderPane();
-        pane.setPrefSize(600, 400);
+        pane.setPrefSize(400, 200);
         VBox vbox = new VBox(10);
         HBox insertPane1 = new HBox(20);
         HBox insertPane2 = new HBox(20);
@@ -34,15 +35,16 @@ public class BudjettiUi extends Application {
         TextField expenseText = new TextField();
         Button incomeButton = new Button("Valmis");
         incomeButton.setOnAction((event) -> {
-            int money = Integer.parseInt(incomeText.getText());
-            System.out.println("hoy");
+            int money = 0;
             balance.addIncome(money);
             incomeText.clear();
         });
+        //Integer.parseInt(incomeText.getText()) tulossa 0 tilalle
         Button expenseButton = new Button("Valmis");
         expenseButton.setOnAction((event) -> {
-            balance.addExpense(Integer.parseInt(expenseText.getText()));
+            balance.addExpense(0);
         });
+        //Integer.parseInt(expenseText.getText())
 
         insertPane1.getChildren().addAll(incomeText, incomeButton);
         insertPane2.getChildren().addAll(expenseText, expenseButton);
@@ -51,7 +53,9 @@ public class BudjettiUi extends Application {
         vbox.getChildren().add(insertPane1);
         vbox.getChildren().add(new Label("Lisää meno: "));
         vbox.getChildren().add(insertPane2);
-        vbox.getChildren().add(new Label("Yhteensä rahaa jäljellä: " + balance.getBalance()));
+        vbox.getChildren().add(new Label("Yhteensä rahaa jäljellä: " 
+                + 0));
+        //Tähän balance.getBalance(); miksi ei toimi
         
         pane.setCenter(vbox);
         Scene scene = new Scene(pane);

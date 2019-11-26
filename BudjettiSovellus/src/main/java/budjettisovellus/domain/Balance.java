@@ -18,7 +18,11 @@ public class Balance {
         balance = balance + income;
     }
     
-    public void addExpense(Integer expense) {
-        balance = balance - expense;
+    public boolean addExpense(Integer expense) {
+        if (balance - expense >= 0) {
+            balance = balance - expense;
+            return true;
+        }
+        return false;
     }
 }
