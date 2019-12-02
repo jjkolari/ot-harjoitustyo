@@ -35,8 +35,7 @@ public class BudjettiUi extends Application {
         TextField expenseText = new TextField();
         Button incomeButton = new Button("Valmis");
         incomeButton.setOnAction((event) -> {
-            int money = 20;
-            balance.addIncome(money);
+            balance.addIncome(20);
             incomeText.clear();
         });
         //Integer.parseInt(incomeText.getText()) tulossa 0 tilalle
