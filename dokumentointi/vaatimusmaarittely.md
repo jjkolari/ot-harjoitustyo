@@ -18,9 +18,9 @@ useamman rekisteröityneen käyttäjän, joilla kaikilla on oma yksilöllinen bu
 
 ### Kirjautumisen jälkeen
 
-- käyttäjä näkee kuukausittaiset omat tulonsa, menonsa sekä niiden välisen suhteen kuvaamaan ns. balancea
+- käyttäjä näkee kuukausittaiset omat tulonsa, menonsa sekä niiden välisen suhteen kuvaamaan ns. balancea "tehty/saatu toimimaan"
 
-- käyttäjä voi lisätä tuloja sekä menoja
+- käyttäjä voi lisätä tuloja sekä menoja "tehty/saatu toimimaan"
 
 - käyttäjä voi kirjautua ulos järjestelmästä
 
