@@ -3,7 +3,7 @@ package budjettisovellus.domain;
 
 public class Balance {
     
-    public Integer balance;
+    public int balance;
     public User user;
     
     public void Balance() {

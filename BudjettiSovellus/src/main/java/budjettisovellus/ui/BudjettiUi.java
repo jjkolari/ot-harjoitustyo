@@ -35,14 +35,14 @@ public class BudjettiUi extends Application {
         TextField expenseText = new TextField();
         Button incomeButton = new Button("Valmis");
         incomeButton.setOnAction((event) -> {
-            int money = 0;
+            int money = 20;
             balance.addIncome(money);
             incomeText.clear();
         });
         //Integer.parseInt(incomeText.getText()) tulossa 0 tilalle
         Button expenseButton = new Button("Valmis");
         expenseButton.setOnAction((event) -> {
-            balance.addExpense(0);
+            balance.addExpense(10);
         });
         //Integer.parseInt(expenseText.getText())
 
@@ -54,7 +54,7 @@ public class BudjettiUi extends Application {
         vbox.getChildren().add(new Label("Lisää meno: "));
         vbox.getChildren().add(insertPane2);
         vbox.getChildren().add(new Label("Yhteensä rahaa jäljellä: " 
-                + 0));
+                + balance.getBalance()));
         //Tähän balance.getBalance(); miksi ei toimi
         
         pane.setCenter(vbox);
