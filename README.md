@@ -8,3 +8,5 @@ Sovelluksen avulla on mahdollista seurata omia tuloja. Sovellukseen lisätään 
 
 [Työaikakirjanpito](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
 
+[Arkkitehtuurikuvaus](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
+
