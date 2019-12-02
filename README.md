@@ -10,3 +10,7 @@ Sovelluksen avulla on mahdollista seurata omia tuloja. Sovellukseen lisätään 
 
 [Arkkitehtuurikuvaus](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/arkkitehtuuri.md)
 
+## Releaset
+
+[Viikko 5](https://github.com/jjkolari/ot-harjoitustyo/releases/tag/viikko5)
+
