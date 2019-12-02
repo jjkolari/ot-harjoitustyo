@@ -14,11 +14,11 @@ public class Balance {
         return this.balance;
     }
     
-    public void addIncome(Integer income) {
+    public void addIncome(int income) {
         balance = balance + income;
     }
     
-    public boolean addExpense(Integer expense) {
+    public boolean addExpense(int expense) {
         if (balance - expense >= 0) {
             balance = balance - expense;
             return true;

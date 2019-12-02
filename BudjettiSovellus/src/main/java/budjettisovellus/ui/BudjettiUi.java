@@ -14,12 +14,21 @@ import javafx.stage.Stage;
 public class BudjettiUi extends Application {
     
     private Balance balance;
+    private Label balanceTogether;
     
     @Override
     public void init() throws Exception {
         balance = new Balance();
+        
+        
         //seuraava steppi on lisätä mahdollisuus yksilölliseen budjettii
         //jolloin tämä kohta muuttuu / kehittyy
+    }
+    
+    public void updateBalance(TextField textField) {
+        textField.clear();
+        balanceTogether.setText("Yhteensä rahaa jäljellä: " 
+                + balance.getBalance());
     }
 
     @Override
@@ -33,28 +42,30 @@ public class BudjettiUi extends Application {
 
         TextField incomeText = new TextField();
         TextField expenseText = new TextField();
+        balanceTogether = new Label("Yhteensä rahaa jäljellä: " 
+                + balance.getBalance());
         Button incomeButton = new Button("Valmis");
         incomeButton.setOnAction((event) -> {
-            balance.addIncome(20);
-            incomeText.clear();
+            balance.addIncome(10);
+            updateBalance(incomeText);
         });
         //Integer.parseInt(incomeText.getText()) tulossa 0 tilalle
         Button expenseButton = new Button("Valmis");
         expenseButton.setOnAction((event) -> {
             balance.addExpense(10);
+            updateBalance(expenseText);
         });
         //Integer.parseInt(expenseText.getText())
 
         insertPane1.getChildren().addAll(incomeText, incomeButton);
         insertPane2.getChildren().addAll(expenseText, expenseButton);
+        
 
         vbox.getChildren().add(new Label("Lisää tulo: "));
         vbox.getChildren().add(insertPane1);
         vbox.getChildren().add(new Label("Lisää meno: "));
         vbox.getChildren().add(insertPane2);
-        vbox.getChildren().add(new Label("Yhteensä rahaa jäljellä: " 
-                + balance.getBalance()));
-        //Tähän balance.getBalance(); miksi ei toimi
+        vbox.getChildren().add(balanceTogether);
         
         pane.setCenter(vbox);
         Scene scene = new Scene(pane);

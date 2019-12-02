@@ -28,20 +28,19 @@ public class BalanceTest {
     
     @Test
     public void testGetBalance() {
-        //assertEquals(balance.getBalance(), 0);
+        assertEquals(balance.getBalance(), 0);
     }
     
     @Test
     public void testAddIncome() {
         balance.addIncome(100);
-        //assertEquals(balance.getBalance(), 100);
-        //javadoc not found täälläkin....
+        assertEquals(balance.getBalance(), 100);
     }
 
     @Test
     public void testAddExpense() {
-        //balance.addExpense(100);
-        //assertEquals(balance.getBalance(), 0);
+        balance.addExpense(100);
+        assertEquals(balance.getBalance(), 0);
     }
     
 }
