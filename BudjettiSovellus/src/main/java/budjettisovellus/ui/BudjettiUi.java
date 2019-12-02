@@ -40,19 +40,21 @@ public class BudjettiUi extends Application {
         HBox insertPane1 = new HBox(20);
         HBox insertPane2 = new HBox(20);
 
-        TextField incomeText = new TextField();
-        TextField expenseText = new TextField();
+        final TextField incomeText = new TextField();
+        final TextField expenseText = new TextField();
+        
         balanceTogether = new Label("Yhteensä rahaa jäljellä: " 
                 + balance.getBalance());
+        
         Button incomeButton = new Button("Valmis");
         incomeButton.setOnAction((event) -> {
-            balance.addIncome(10);
+            balance.addIncome(incomeText.getText());
             updateBalance(incomeText);
         });
         //Integer.parseInt(incomeText.getText()) tulossa 0 tilalle
         Button expenseButton = new Button("Valmis");
         expenseButton.setOnAction((event) -> {
-            balance.addExpense(10);
+            balance.addExpense(expenseText.getText());
             updateBalance(expenseText);
         });
         //Integer.parseInt(expenseText.getText())
@@ -60,12 +62,8 @@ public class BudjettiUi extends Application {
         insertPane1.getChildren().addAll(incomeText, incomeButton);
         insertPane2.getChildren().addAll(expenseText, expenseButton);
         
-
-        vbox.getChildren().add(new Label("Lisää tulo: "));
-        vbox.getChildren().add(insertPane1);
-        vbox.getChildren().add(new Label("Lisää meno: "));
-        vbox.getChildren().add(insertPane2);
-        vbox.getChildren().add(balanceTogether);
+        vbox.getChildren().addAll(new Label("Lisää tulo: "), insertPane1, 
+                new Label("Lisää meno: "), insertPane2, balanceTogether);
         
         pane.setCenter(vbox);
         Scene scene = new Scene(pane);
