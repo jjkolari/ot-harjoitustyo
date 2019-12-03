@@ -51,13 +51,12 @@ public class BudjettiUi extends Application {
             balance.addIncome(incomeText.getText());
             updateBalance(incomeText);
         });
-        //Integer.parseInt(incomeText.getText()) tulossa 0 tilalle
+        
         Button expenseButton = new Button("Valmis");
         expenseButton.setOnAction((event) -> {
             balance.addExpense(expenseText.getText());
             updateBalance(expenseText);
         });
-        //Integer.parseInt(expenseText.getText())
 
         insertPane1.getChildren().addAll(incomeText, incomeButton);
         insertPane2.getChildren().addAll(expenseText, expenseButton);

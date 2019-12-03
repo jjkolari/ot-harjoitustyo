@@ -33,13 +33,20 @@ public class BalanceTest {
     
     @Test
     public void testAddIncome() {
-        balance.addIncome(100);
+        balance.addIncome("100");
         assertEquals(balance.getBalance(), 100);
+    }
+    
+    @Test
+    public void testAddExpense() {
+        balance.addIncome("100");
+        balance.addExpense("20");
+        assertEquals(balance.getBalance(), 80);
     }
 
     @Test
-    public void testAddExpense() {
-        balance.addExpense(100);
+    public void testAddExpenseDoesNotGoNegative() {
+        balance.addExpense("100");
         assertEquals(balance.getBalance(), 0);
     }
     
