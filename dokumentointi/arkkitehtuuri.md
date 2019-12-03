@@ -26,6 +26,10 @@ Tänne luokka/pakkauskaavio
 
 ### Päätoiminnallisuudet
 
+#### Käyttäjä lisää tulon
+
+<img src="https://raw.githubusercontent.com/jjkolari/ot-harjoitustyo/master/dokumentointi/addIncome.png" width="160">
+
 ...
 
 ## Ohjelman rakenteeseen jääneet heikkoudet
