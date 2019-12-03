@@ -28,7 +28,7 @@ Tänne luokka/pakkauskaavio
 
 #### Käyttäjä lisää tulon
 
-<img src="https://raw.githubusercontent.com/jjkolari/ot-harjoitustyo/master/dokumentointi/addIncome.png" width="600">
+<img src="https://raw.githubusercontent.com/jjkolari/ot-harjoitustyo/master/dokumentointi/addIncome.png" width="500">
 
 ...
 
