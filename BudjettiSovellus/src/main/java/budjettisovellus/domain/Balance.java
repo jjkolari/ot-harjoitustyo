@@ -1,9 +1,9 @@
 package budjettisovellus.domain;
 
 public class Balance {
-
-    public int balance;
-    public User user;
+    
+    int balance;
+    User user;
 
     public void Balance() {
         this.balance = 0;

@@ -8,7 +8,8 @@ package budjettisovellus.domain;
 
 public class User {
     
-    private String username;
-    private String password;
+    String username;
+    Balance balance;
+    
     
 }
