@@ -1,6 +1,6 @@
 # Budjetointi-sovellus
 
-Sovelluksen avulla on mahdollista seurata omia tuloja. Sovellukseen lisätään omat tulot sekä menot ja se laskelmoi niistä ylijäävän rahasumman.
+Sovelluksen avulla on mahdollista seurata omia tuloja. Sovellukseen lisätään omat tulot sekä menot ja se laskelmoi niistä ylijäävän rahasumman. Tällä hetkellä sovelluksella ei toimi muut kuin käyttäjätunnus "jjkolari".
 
 ## Dokumentaatio
 
