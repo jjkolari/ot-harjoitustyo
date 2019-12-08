@@ -31,7 +31,7 @@ public class BudjettiUi extends Application {
 
         Scene loginScene = new Scene(createLoginPane());
         stage.setScene(loginScene);
-        stage.setTitle("Budjetti-sovellus.");
+        stage.setTitle("Budjettisovellus.");
         stage.show();
 
         login.setOnAction((event) -> {
@@ -121,6 +121,7 @@ public class BudjettiUi extends Application {
     public void getTheBalanceScene(Stage stage) {
         BorderPane pane = new BorderPane();
         pane.setPrefSize(400, 200);
+        pane.setPadding(new Insets(20, 20, 20, 20));
         VBox vbox = new VBox(10);
         HBox insertPane1 = new HBox(20);
         HBox insertPane2 = new HBox(20);
@@ -155,7 +156,7 @@ public class BudjettiUi extends Application {
 
         Scene loginScene = new Scene(pane);
         stage.setScene(loginScene);
-        stage.setTitle("Budjetti-sovellus.");
+        stage.setTitle("Budjettisovellus.");
         stage.show();
     }
 
