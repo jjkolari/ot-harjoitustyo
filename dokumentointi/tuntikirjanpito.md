@@ -9,5 +9,6 @@
 | 2.12. | 6 | Lisätty jacoco sekä checkstyle.xml, viikko 5 tehtävät |
 | 3.12. | 2 | Sekvenssikaavio ja fiksailuja |
 | 7.12. | 1 | Suunnittelua |
-| 8.12. | 3 | Kirjautumis näkymän luonti |
-| yht   | 23 | | 
+| 8.12. | 5 | Kirjautumis-näkymän luonti ja tietokantoihin tutustumista |
+| 9.12. | 4 | Tietokantiohin tutustumista ja tilastojen lisäys |
+| yht   | 29 | | 
