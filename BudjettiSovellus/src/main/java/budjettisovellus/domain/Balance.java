@@ -1,14 +1,20 @@
 package budjettisovellus.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Balance {
     
     int balance;
     User user;
+    List<Transaction> transactions;
 
-    public void Balance() {
+    public Balance() {
         this.balance = 0;
+        this.transactions = new ArrayList<>();
     }
-
+    
+    
     public int getBalance() {
         return this.balance;
     }
@@ -16,8 +22,10 @@ public class Balance {
     public boolean addIncome(String income) {
 
         try {
-            Integer.parseInt(income);
+            int amount = Integer.parseInt(income);
             balance = balance + Integer.parseInt(income);
+            Transaction t = new Transaction(amount, true, balance);
+            transactions.add(t);
             return true;
         } catch (NumberFormatException e) {
             return false;
@@ -32,12 +40,19 @@ public class Balance {
 
             if (balance - exp >= 0) {
                 balance = balance - exp;
+                Transaction t = new Transaction(exp, true, balance);
+                transactions.add(t);
+                return true;
             }
 
-            return true;
+            return false;
         } catch (NumberFormatException e) {
             return false;
         }
 
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
     }
 }

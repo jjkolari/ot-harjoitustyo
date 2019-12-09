@@ -11,5 +11,14 @@ public class User {
     String username;
     Balance balance;
     
+    public User(String username) {
+        this.username = username;
+        this.balance = new Balance();
+    }
+    
+    public String getUsername() {
+        return username;
+    }
+    
     
 }
