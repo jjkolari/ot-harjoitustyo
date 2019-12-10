@@ -13,14 +13,14 @@ useamman rekisteröityneen käyttäjän, joilla kaikilla on oma yksilöllinen bu
   - käyttäjätunnuksen täytyy olla uniikki ja pituudeltaan vähintään 3 merkkiä
 
 - käyttäjä voi kirjautua järjestelmään
-  - kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus kirjautumislomakkeelle
-  - jos käyttäjää ei olemassa, ilmoittaa järjestelmä tästä
+  - kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus kirjautumislomakkeelle "tehty osittain - onnistuu nyt käyttäjätunnuksella jjkolari"
+  - jos käyttäjää ei olemassa, ilmoittaa järjestelmä tästä "tehty"
 
 ### Kirjautumisen jälkeen
 
-- käyttäjä näkee kuukausittaiset omat tulonsa, menonsa sekä niiden välisen suhteen kuvaamaan ns. balancea "tehty/saatu toimimaan"
+- käyttäjä näkee kuukausittaiset omat tulonsa, menonsa sekä niiden välisen suhteen kuvaamaan ns. balancea "tehty"
 
-- käyttäjä voi lisätä tuloja sekä menoja "tehty/saatu toimimaan"
+- käyttäjä voi lisätä tuloja sekä menoja "tehty"
 
 - käyttäjä voi kirjautua ulos järjestelmästä
 
