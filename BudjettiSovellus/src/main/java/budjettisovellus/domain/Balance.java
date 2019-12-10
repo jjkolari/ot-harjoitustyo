@@ -3,6 +3,10 @@ package budjettisovellus.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class handles and stores in a list the coming transactions
+ * and keeps up the track of balance
+ */
 public class Balance {
     
     int balance;
@@ -18,7 +22,14 @@ public class Balance {
     public int getBalance() {
         return this.balance;
     }
-
+    
+    /**
+     * Method tells if the transaction has come through
+     * and updates the balance
+     * 
+     * @param income Users given amount of income
+     * @return has the transaction been successful
+     */
     public boolean addIncome(String income) {
 
         try {
@@ -32,7 +43,14 @@ public class Balance {
         }
 
     }
-
+    
+    /**
+     *  Method tells if the transaction has come through
+     * and updates the balance
+     * 
+     * @param expense Users given amount of expense
+     * @return has the transaction been successful
+     */
     public boolean addExpense(String expense) {
 
         try {
@@ -51,7 +69,7 @@ public class Balance {
         }
 
     }
-
+    
     public List<Transaction> getTransactions() {
         return transactions;
     }

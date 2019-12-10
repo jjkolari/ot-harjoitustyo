@@ -8,13 +8,16 @@ package budjettisovellus.domain;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-
+/**
+ * Class gives the transaction the needed attributes
+ */
 public class Transaction {
     int amount;
     Boolean income;
     int balance;
     LocalDate date;
     LocalTime time;
+    
     
     public Transaction(int amount, Boolean income, int balance) {
         this.amount = amount;

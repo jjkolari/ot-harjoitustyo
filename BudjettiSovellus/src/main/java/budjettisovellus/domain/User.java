@@ -5,7 +5,9 @@
  */
 package budjettisovellus.domain;
 
-
+/**
+ * Gives the user needed attributes
+ */
 public class User {
     
     String username;
