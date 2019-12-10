@@ -22,6 +22,8 @@ useamman rekisteröityneen käyttäjän, joilla kaikilla on oma yksilöllinen bu
 
 - käyttäjä voi lisätä tuloja sekä menoja "tehty"
 
+- käyttäjä voi nähdä viivakaaviona lisäämiänsä tuloja ja menoja "tehty alkuun vielä hiottavaa"
+
 - käyttäjä voi kirjautua ulos järjestelmästä
 
 ## Jatkokehitysideoita
