@@ -11,4 +11,5 @@
 | 7.12. | 1 | Suunnittelua |
 | 8.12. | 5 | Kirjautumis-näkymän luonti ja tietokantoihin tutustumista |
 | 9.12. | 4 | Tietokantiohin tutustumista ja tilastojen lisäys |
-| yht   | 29 | | 
+| 10.12. | 4 | Javadoc ja tietokantoihin tutustumista |
+| yht   | 32 | | 
