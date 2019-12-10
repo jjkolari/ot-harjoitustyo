@@ -14,6 +14,9 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+/**
+ * Class handles the application
+ */
 public class BudjettiUi extends Application {
 
     Balance balance;
@@ -30,7 +33,7 @@ public class BudjettiUi extends Application {
         //seuraava steppi on lisätä mahdollisuus yksilölliseen budjettii
         //jolloin tämä kohta muuttuu / kehittyy
     }
-
+    
     @Override
     public void start(Stage stage) {
 
@@ -53,13 +56,21 @@ public class BudjettiUi extends Application {
         });
 
     }
-
+    
+    /**
+     * Method updates the balance for the home view
+     * @param textField the textfield with the amount given
+     */
     public void updateBalance(TextField textField) {
         textField.clear();
         balanceTogether.setText("Yhteensä rahaa jäljellä: "
                 + balance.getBalance());
     }
-
+    
+    /**
+     * Method creates the login stage
+     * @return created GridPane for stage
+     */
     public GridPane createLoginPane() {
         Label guideText = new Label("Kirjaudu sisään käyttäjätunnuksella tai luo uusi tunnus");
         getUsername = new TextField();
@@ -88,7 +99,14 @@ public class BudjettiUi extends Application {
 
         return loginPane;
     }
-
+    
+    /**
+     * Method checks if login is possible
+     * and does the action needed
+     * @param username Users submitted username
+     * @param stage View going on so it can be editted
+     * @return 
+     */
     public boolean login(String username, Stage stage) {
 
         if (username.equals("jjkolari")) {
@@ -103,9 +121,13 @@ public class BudjettiUi extends Application {
 
     }
 
+    /**
+     * Method creates and shows the main view as the stage
+     * where you can add income/expense
+     * @param stage application's stage
+     * @param username users username that login
+     */
     public void getTheBalanceScene(Stage stage, String username) {
-        //creates the scene where you can add income/expense
-        //and show your balance/statics
         BorderPane pane = new BorderPane();
         pane.setPrefSize(300, 200);
         pane.setPadding(new Insets(20, 20, 20, 20));
@@ -159,6 +181,11 @@ public class BudjettiUi extends Application {
         stage.show();
     }
 
+    /**
+     * creates statics from users balance
+     * @param transactions all the transactions made by user
+     * @param stage application's stage
+     */
     public void createStatics(List<Transaction> transactions, Stage stage) {
         //creates statics as a linechart
         //needs a lot of improvment still
