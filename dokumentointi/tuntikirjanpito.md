@@ -13,5 +13,5 @@
 | 9.12. | 4 | Tietokantiohin tutustumista ja tilastojen lisäys |
 | 10.12. | 4 | Javadoc ja tietokantoihin tutustumista |
 | 17.12. | 5 | Tietokannan lisäys |
-| 18.12 | x | |
+| 18.12 | x | Dokumentointi |
 | yht   | 37 | | 
