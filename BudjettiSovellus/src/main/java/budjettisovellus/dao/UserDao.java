@@ -54,16 +54,13 @@ public class UserDao {
     public User findByUsername(String username) throws SQLException {
         PreparedStatement stmt = db.getConnection().prepareStatement("SELECT * FROM User WHERE username = ?");
         stmt.setString(1, username);
-        System.out.println("Syötetty username: " + username);
 
         ResultSet rs = stmt.executeQuery();
         boolean hasOne = rs.next();
         if (!hasOne) {
-            System.out.println("tämä kävi");
             return null;
         }
         int id = rs.getInt("id");
-        System.out.println("id: " + id);
         rs.close();
         stmt.close();
         db.closeConnection();

@@ -155,7 +155,6 @@ public class BudjettiUi extends Application {
      * @throws java.sql.SQLException 
      */
     public boolean login(String username, Stage stage) throws SQLException {
-        System.out.println(budgetService.login(username));
         if (budgetService.login(username)) {
             getTheBalanceScene(stage, username);
         } else {
