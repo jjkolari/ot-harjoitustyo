@@ -10,10 +10,12 @@ package budjettisovellus.domain;
  */
 public class User {
     
+    int id;
     String username;
     Balance balance;
     
-    public User(String username) {
+    public User(int id, String username) {
+        this.id = id;
         this.username = username;
         this.balance = new Balance();
     }

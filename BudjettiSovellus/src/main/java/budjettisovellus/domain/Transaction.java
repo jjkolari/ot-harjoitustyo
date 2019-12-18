@@ -42,4 +42,8 @@ public class Transaction {
     public LocalTime getTime() {
         return time;
     }
+    
+    public LocalDate getDate() {
+        return date;
+    }
 }
