@@ -111,6 +111,10 @@ public class BudjettiUi extends Application {
         return loginPane;
     }
     
+    /**
+     * Registeration scene
+     * @param stage 
+     */
     public void createNewUserScene(Stage stage) {
         VBox pane = new VBox();
         pane.setPadding(new Insets(20, 20, 20, 20));

@@ -8,16 +8,29 @@ package budjettisovellus.dao;
 import budjettisovellus.domain.User;
 import java.sql.*;
 
+/**
+ * Handles User database
+ */
 public class UserDao {
     
     private DatabaseDao db;
     private Integer id;
     
+    /**
+     * Inits the wanted database and sets Users id to 0
+     * @param databaseDao 
+     */
     public UserDao(DatabaseDao databaseDao) {
         this.db = databaseDao;
         this.id = 0;
     }
     
+    /**
+     * Finds a User from database with its id
+     * @param id users given id 0...
+     * @return User finded
+     * @throws SQLException 
+     */
     public User findOne(int id) throws SQLException {
         Connection connection = db.getConnection();
         PreparedStatement stmt = connection.prepareStatement("SELECT * FROM User WHERE id = ?");
@@ -38,6 +51,12 @@ public class UserDao {
         return u;
     }
     
+    /**
+     * Creates/registers new user to database
+     * @param username given users wanted username
+     * @return created user
+     * @throws SQLException 
+     */
     public User createNewUser(String username) throws SQLException {
         Connection connection = db.getConnection();
         PreparedStatement stmt = connection.prepareStatement("INSERT INTO User (id, username, balance) VALUES (?, ?, 0)");
@@ -51,6 +70,12 @@ public class UserDao {
         return this.findByUsername(username);
     }
     
+    /**
+     * Find user by username, used in login
+     * @param username login
+     * @return found user
+     * @throws SQLException 
+     */
     public User findByUsername(String username) throws SQLException {
         PreparedStatement stmt = db.getConnection().prepareStatement("SELECT * FROM User WHERE username = ?");
         stmt.setString(1, username);
