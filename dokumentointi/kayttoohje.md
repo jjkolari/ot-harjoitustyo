@@ -22,7 +22,7 @@ Sovellus käynnistyy kirjautumisnäkymään:
 
 Voit kirjautua sovellukseen kirjoittamalla olemassaoleva käyttäjätunnus ja painamalla 'Kirjaudu'.
 
-## Uuden käyttäjän luominen
+## Rekisteröinti
 
 Kirjautumisnäkymästä on mahdollista siirtyä uuden käyttäjän luomisnäkymään panikkeella 'Uusi tunnus'.
 
