@@ -95,8 +95,7 @@ public class BudjettiUi extends Application {
         loginPane.add(getUsername, 0, 1);
 
         HBox buttons = new HBox();
-        buttons.setPadding(new Insets(0, 20, 20, 0));
-        buttons.setSpacing(10);
+        buttons.setSpacing(50);
         buttons.getChildren().addAll(login, createNewUser);
 
         loginPane.add(buttons, 0, 2);
@@ -104,9 +103,9 @@ public class BudjettiUi extends Application {
 
         loginPane.setPrefSize(350, 180);
         loginPane.setAlignment(Pos.CENTER);
-        loginPane.setVgap(10);
+        loginPane.setVgap(20);
         loginPane.setHgap(10);
-        loginPane.setPadding(new Insets(20, 20, 20, 20));
+        loginPane.setPadding(new Insets(10, 10, 10, 10));
 
         return loginPane;
     }
@@ -218,8 +217,8 @@ public class BudjettiUi extends Application {
             createStatics(balance.getTransactions(), stage);
         });
         
-        HBox analyseAndLogOut = new HBox(20);
-       
+        HBox analyseAndLogOut = new HBox(80);
+        analyseAndLogOut.setPadding(new Insets(20,0,0,0));
         
         Button logoutButton = new Button("Kirjaudu ulos");
         logoutButton.setOnAction((event) -> {
@@ -277,7 +276,11 @@ public class BudjettiUi extends Application {
         });
 
         XYChart.Series expenses = new XYChart.Series();
-        incomes.setName("Menot");
+        expenses.setName("Menot");
+        
+        balanceWTime.getData().add(new XYChart.Data(0,0));
+        incomes.getData().add(new XYChart.Data(0,0));
+        expenses.getData().add(new XYChart.Data(0,0));
 
         transactions.stream().forEach(t -> {
             //all the expenses have boolean false

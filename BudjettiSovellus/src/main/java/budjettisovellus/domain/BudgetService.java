@@ -51,7 +51,6 @@ public class BudgetService {
      */
     public boolean login(String username) throws SQLException {
         User user = userDao.findByUsername(username);
-        System.out.println(user);
         if (user == null) {
             return false;
         }

@@ -16,7 +16,6 @@ public class Transaction {
     Boolean income;
     int balance;
     LocalDate date;
-    LocalTime time;
     
     
     public Transaction(int amount, Boolean income, int balance) {
@@ -24,7 +23,6 @@ public class Transaction {
         this.income = income;
         this.balance = balance;
         this.date = LocalDate.now();
-        this.time = LocalTime.now();
     }
     
     public int getAmount() {
@@ -37,10 +35,6 @@ public class Transaction {
     
     public int getBalance() {
         return balance;
-    }
-    
-    public LocalTime getTime() {
-        return time;
     }
     
     public LocalDate getDate() {
