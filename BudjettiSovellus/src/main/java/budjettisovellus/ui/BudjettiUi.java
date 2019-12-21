@@ -1,7 +1,6 @@
 package budjettisovellus.ui;
 
 import budjettisovellus.dao.DatabaseDao;
-import budjettisovellus.domain.Balance;
 import budjettisovellus.domain.BudgetService;
 import budjettisovellus.domain.Transaction;
 import java.sql.SQLException;
@@ -26,7 +25,6 @@ public class BudjettiUi extends Application {
     
     static BudgetService budgetService;
     
-    Balance balance;
     Label balanceTogether;
     TextField getUsername;
     Button login;
@@ -35,7 +33,6 @@ public class BudjettiUi extends Application {
 
     @Override
     public void init() throws Exception {
-        balance = new Balance();
         errorText = new Label("");
         errorText.setTextFill(Color.web("#FF6347"));
         

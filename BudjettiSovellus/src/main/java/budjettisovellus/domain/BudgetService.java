@@ -139,5 +139,13 @@ public class BudgetService {
             return new ArrayList<>();
         }
     }
+    
+    public UserDao getUserDao() {
+        return this.userDao;
+    }
+    
+    public TransactDao getTransactDao() {
+        return this.transactDao;
+    }
 
 }
