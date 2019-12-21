@@ -77,7 +77,6 @@ public class BudgetService {
             int amount = Integer.parseInt(income);
             this.balance = this.balance + amount;
             Transaction t = new Transaction(amount, true, getBalance() + amount);
-            System.out.println(t);
             transactions.add(t);
             try {
                 transactDao.createNewTransact(t, this.userLoggedIn);
