@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa tiedosto [budjettisovellus.jar](https://github.com/mluukkai/OtmTodoApp/releases/tag/0.1)
+Lataa tiedosto [budjettisovellus.jar](https://github.com/jjkolari/ot-harjoitustyo/releases/tag/loppupalautus)
 
 ## Konfigurointi
 
