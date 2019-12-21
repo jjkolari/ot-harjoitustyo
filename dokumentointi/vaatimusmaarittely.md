@@ -13,16 +13,16 @@ useamman rekisteröityneen käyttäjän, joilla kaikilla on oma yksilöllinen bu
   - käyttäjätunnuksen täytyy olla uniikki ja pituudeltaan vähintään 3 merkkiä
 
 - käyttäjä voi kirjautua järjestelmään
-  - kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus kirjautumislomakkeelle "tehty osittain - onnistuu nyt käyttäjätunnuksella jjkolari"
-  - jos käyttäjää ei olemassa, ilmoittaa järjestelmä tästä "tehty"
+  - kirjautuminen onnistuu syötettäessä olemassaoleva käyttäjätunnus kirjautumislomakkeelle
+  - jos käyttäjää ei olemassa, ilmoittaa järjestelmä tästä
 
 ### Kirjautumisen jälkeen
 
-- käyttäjä näkee kuukausittaiset omat tulonsa, menonsa sekä niiden välisen suhteen kuvaamaan ns. balancea "tehty"
+- käyttäjä näkee kuukausittaiset omat tulonsa, menonsa sekä niiden välisen suhteen kuvaamaan ns. balancea
 
-- käyttäjä voi lisätä tuloja sekä menoja "tehty"
+- käyttäjä voi lisätä tuloja sekä menoja
 
-- käyttäjä voi nähdä viivakaaviona lisäämiänsä tuloja ja menoja "tehty alkuun vielä hiottavaa"
+- käyttäjä voi nähdä viivakaaviona lisäämiänsä tuloja ja menoja
 
 - käyttäjä voi kirjautua ulos järjestelmästä
 
@@ -30,6 +30,7 @@ useamman rekisteröityneen käyttäjän, joilla kaikilla on oma yksilöllinen bu
 
 Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla
 
+- käyttäjällä säilyy tapahtumat seuraavassa kirjautumisessa
 - käyttäjä voi määritellä pysyvät tulot ja menot, niin että ne säilyy kuukaudesta toiseen
 - käyttäjä voi luokitella menoja osioihin: talous, viihde, säästö
 - käyttäjä voi vaihtaa näkymää haluamaan ajanjaksoon: päivä, viikko, kuukausi, vuosi
