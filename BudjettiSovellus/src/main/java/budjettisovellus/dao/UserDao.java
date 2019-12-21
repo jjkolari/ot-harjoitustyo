@@ -14,15 +14,13 @@ import java.sql.*;
 public class UserDao {
     
     private DatabaseDao db;
-    private Integer id;
     
     /**
-     * Inits the wanted database and sets Users id to 0
+     * Inits the wanted database
      * @param databaseDao 
      */
     public UserDao(DatabaseDao databaseDao) {
         this.db = databaseDao;
-        this.id = 0;
     }
     
     /**
@@ -59,10 +57,8 @@ public class UserDao {
      */
     public User createNewUser(String username) throws SQLException {
         Connection connection = db.getConnection();
-        PreparedStatement stmt = connection.prepareStatement("INSERT INTO User (id, username, balance) VALUES (?, ?, 0)");
-        stmt.setInt(1, id);
-        id++;
-        stmt.setString(2, username);
+        PreparedStatement stmt = connection.prepareStatement("INSERT INTO User (username) VALUES (?)");
+        stmt.setString(1, username);
 
         stmt.executeUpdate();
         stmt.close();
@@ -77,6 +73,24 @@ public class UserDao {
      * @throws SQLException 
      */
     public User findByUsername(String username) throws SQLException {
+        PreparedStatement stmt = db.getConnection().prepareStatement("SELECT * FROM User WHERE username = ?");
+        stmt.setString(1, username);
+
+        ResultSet rs = stmt.executeQuery();
+        boolean hasOne = rs.next();
+        if (!hasOne) {
+            return null;
+        }
+        int id = rs.getInt("id");
+        rs.close();
+        stmt.close();
+        db.closeConnection();
+
+        User u = new User(id, username);
+        return u;
+    }
+    
+    public User updateBalance(String username) throws SQLException {
         PreparedStatement stmt = db.getConnection().prepareStatement("SELECT * FROM User WHERE username = ?");
         stmt.setString(1, username);
 

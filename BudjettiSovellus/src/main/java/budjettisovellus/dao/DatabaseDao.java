@@ -34,15 +34,26 @@ public class DatabaseDao {
      * @throws SQLException 
      */
     public void init() throws SQLException{
-        //list.add("CREATE TABLE Transaction (id integer PRIMARY KEY, amount integer, income boolean, currentBalance integer, happened date, FOREIGN KEY (user_id) REFERENCES User(id));");
         try {
             this.conn = getConnection();
             Statement stmt = conn.createStatement();
-            String sql = "CREATE TABLE USER "
+            
+            String sql = "CREATE TABLE IF NOT EXISTS USER "
                     + "(id INTEGER PRIMARY KEY, "
-                    + " username varchar(100), "
-                    + " balance INTEGER)";
+                    + " username VARCHAR(100), "
+                    + " balance INTEGER);";
             stmt.executeUpdate(sql);
+            
+            String sql2 = "CREATE TABLE IF NOT EXISTS TRANSACT "
+                    + "(id INTEGER PRIMARY KEY, "
+                    + " amount integer, "
+                    + " income boolean, "
+                    + " currentBalance integer, "
+                    + " date date, "
+                    + " user_username varchar(200),"
+                    + " FOREIGN KEY (user_username) REFERENCES User(username));";
+            stmt.executeUpdate(sql2);
+            
             stmt.close();
             conn.close();
         } catch (SQLException ex) {

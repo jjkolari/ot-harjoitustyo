@@ -1,7 +1,6 @@
 package budjettisovellus.ui;
 
 import budjettisovellus.dao.DatabaseDao;
-import budjettisovellus.dao.UserDao;
 import budjettisovellus.domain.Balance;
 import budjettisovellus.domain.BudgetService;
 import budjettisovellus.domain.Transaction;
@@ -32,12 +31,13 @@ public class BudjettiUi extends Application {
     TextField getUsername;
     Button login;
     Button createNewUser;
-    Label errorInLogin;
+    Label errorText;
 
     @Override
     public void init() throws Exception {
         balance = new Balance();
-        errorInLogin = new Label("");
+        errorText = new Label("");
+        errorText.setTextFill(Color.web("#FF6347"));
         
         //seuraava steppi on lisätä mahdollisuus yksilölliseen budjettii
         //jolloin tämä kohta muuttuu / kehittyy
@@ -75,7 +75,12 @@ public class BudjettiUi extends Application {
     public void updateBalance(TextField textField) {
         textField.clear();
         balanceTogether.setText("Yhteensä rahaa jäljellä: "
-                + balance.getBalance());
+                + budgetService.getBalance());
+        if (budgetService.getBalance() < 0 ) {
+            errorText.setText("Varoitus: menosi ylittivät tulosi!");
+        } else {
+            errorText.setText("");
+        }
     }
     
     /**
@@ -85,7 +90,6 @@ public class BudjettiUi extends Application {
     public GridPane createLoginPane() {
         Label guideText = new Label("Kirjaudu sisään käyttäjätunnuksella tai luo uusi tunnus");
         getUsername = new TextField();
-        getUsername.setText("jjkolari");
 
         login = new Button("Kirjaudu");
         createNewUser = new Button("Uusi tunnus");
@@ -99,7 +103,7 @@ public class BudjettiUi extends Application {
         buttons.getChildren().addAll(login, createNewUser);
 
         loginPane.add(buttons, 0, 2);
-        loginPane.add(errorInLogin, 0, 3);
+        loginPane.add(errorText, 0, 3);
 
         loginPane.setPrefSize(350, 180);
         loginPane.setAlignment(Pos.CENTER);
@@ -118,29 +122,29 @@ public class BudjettiUi extends Application {
         VBox pane = new VBox();
         pane.setPadding(new Insets(20, 20, 20, 20));
         
-        HBox hbox = new HBox();
-        hbox.setPadding(new Insets(20, 20, 20, 20));
+        HBox buttons = new HBox(30);
+        buttons.setPadding(new Insets(20, 20, 20, 0));
         TextField username = new TextField();
         Button submit = new Button("Valmis");
-        hbox.getChildren().addAll(username, submit);
+        buttons.getChildren().addAll(username, submit);
         
         submit.setOnAction((event) -> {
             String theUsername = username.getText().trim();
             username.clear();
             
             try {
+                errorText.setText("");
                 budgetService.createUser(theUsername);
                 getTheBalanceScene(stage, theUsername);
             } catch (SQLException ex) {
-                errorInLogin.setText("Käyttäjätunnus on jo olemassa");
-                errorInLogin.setTextFill(Color.web("#FF6347"));
+                errorText.setText("Käyttäjätunnus on jo olemassa");
             }
             
             
         });
         
         pane.getChildren().add(new Label("Luo uusi käyttäjätunnus: "));
-        pane.getChildren().add(hbox);
+        pane.getChildren().add(buttons);
         
         Scene loginScene = new Scene(pane);
         stage.setScene(loginScene);
@@ -161,8 +165,7 @@ public class BudjettiUi extends Application {
         if (budgetService.login(username)) {
             getTheBalanceScene(stage, username);
         } else {
-            errorInLogin.setText("Käyttäjätunnusta ei löytynyt");
-            errorInLogin.setTextFill(Color.web("#FF6347"));
+            errorText.setText("Käyttäjätunnusta ei löytynyt");
 
             return false;
         }
@@ -184,29 +187,29 @@ public class BudjettiUi extends Application {
         VBox vbox = new VBox(10);
         HBox insertPane1 = new HBox(20);
         HBox insertPane2 = new HBox(20);
-        HBox text1 = new HBox(110);
-        HBox text2 = new HBox(100);
 
         TextField incomeText = new TextField();
         TextField expenseText = new TextField();
-        Label errorText = new Label("");
-        errorText.setTextFill(Color.web("#FF6347"));
 
         balanceTogether = new Label("Yhteensä rahaa jäljellä: "
-                + balance.getBalance());
+                + budgetService.getBalance());
 
         Button incomeButton = new Button("Valmis");
         incomeButton.setOnAction((event) -> {
-            errorText.setText("");
-            balance.addIncome(incomeText.getText());
+            try {
+                budgetService.addIncome(incomeText.getText());
+            } catch (SQLException ex) {
+                Logger.getLogger(BudjettiUi.class.getName()).log(Level.SEVERE, null, ex);
+            }
             updateBalance(incomeText);
         });
 
         Button expenseButton = new Button("Valmis");
         expenseButton.setOnAction((event) -> {
-            errorText.setText("");
-            if (!balance.addExpense(expenseText.getText())) {
-                errorText.setText("Rahasi eivät riitä");
+            try {
+                budgetService.addExpense(expenseText.getText());
+            } catch (SQLException ex) {
+                Logger.getLogger(BudjettiUi.class.getName()).log(Level.SEVERE, null, ex);
             }
             updateBalance(expenseText);
         });
@@ -214,7 +217,7 @@ public class BudjettiUi extends Application {
         Button getStaticsButton = new Button("Analyysi");
         getStaticsButton.setOnAction((event) -> {
             errorText.setText("");
-            createStatics(balance.getTransactions(), stage);
+            createStatics(budgetService.getTransactions(), stage);
         });
         
         HBox analyseAndLogOut = new HBox(80);
@@ -231,7 +234,7 @@ public class BudjettiUi extends Application {
         analyseAndLogOut.getChildren().addAll(getStaticsButton, logoutButton);
 
         vbox.getChildren().addAll(new Label("Lisää tulo: "), insertPane1,
-                new Label("Lisää meno: "), insertPane2, balanceTogether, analyseAndLogOut);
+                new Label("Lisää meno: "), insertPane2, balanceTogether, errorText, analyseAndLogOut);
 
         pane.setCenter(vbox);
 
@@ -248,7 +251,6 @@ public class BudjettiUi extends Application {
      */
     public void createStatics(List<Transaction> transactions, Stage stage) {
         //creates statics as a linechart
-        //needs a lot of improvment still
         NumberAxis xAxis = new NumberAxis();
         NumberAxis yAxis = new NumberAxis();
 
@@ -262,7 +264,7 @@ public class BudjettiUi extends Application {
         balanceWTime.setName("Rahatilanne");
 
         transactions.stream().forEach(t -> {
-            balanceWTime.getData().add(new XYChart.Data(t.getBalance(), t.getDate().getDayOfMonth()));
+            balanceWTime.getData().add(new XYChart.Data(t.getDate().getDayOfMonth(), t.getBalance()));
         });
 
         XYChart.Series incomes = new XYChart.Series();
@@ -271,7 +273,7 @@ public class BudjettiUi extends Application {
         transactions.stream().forEach(t -> {
             //all the incomes have boolean true
             if (t.getIncome()) {
-                incomes.getData().add(new XYChart.Data(t.getAmount(), t.getDate().getDayOfMonth()));
+                incomes.getData().add(new XYChart.Data(t.getDate().getDayOfMonth(), t.getAmount()));
             }
         });
 
@@ -285,7 +287,7 @@ public class BudjettiUi extends Application {
         transactions.stream().forEach(t -> {
             //all the expenses have boolean false
             if (!t.getIncome()) {
-                expenses.getData().add(new XYChart.Data(t.getAmount(), t.getDate().getDayOfMonth()));
+                expenses.getData().add(new XYChart.Data(t.getDate().getDayOfMonth(), t.getAmount()));
             }
         });
 
@@ -311,11 +313,10 @@ public class BudjettiUi extends Application {
     }
 
     public static void main(String[] args) throws SQLException {
-        DatabaseDao database = new DatabaseDao("jdbc:sqlite:users.db");
+        DatabaseDao database = new DatabaseDao("jdbc:sqlite:./BudjettiSovellus.db");
         database.init();
         
-        UserDao userDao = new UserDao(database);
-        budgetService = new BudgetService(userDao);
+        budgetService = new BudgetService(database);
         
         launch(args);
     }

@@ -5,8 +5,8 @@
  */
 package budjettisovellus.domain;
 
+import java.sql.Date;
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 /**
  * Class gives the transaction the needed attributes
@@ -23,6 +23,13 @@ public class Transaction {
         this.income = income;
         this.balance = balance;
         this.date = LocalDate.now();
+    }
+    
+    public Transaction(int amount, Boolean income, int balance, Date date) {
+        this.amount = amount;
+        this.income = income;
+        this.balance = balance;
+        this.date = date.toLocalDate();
     }
     
     public int getAmount() {
