@@ -18,7 +18,7 @@ java -jar budjettisovellus.jar
 
 Sovellus käynnistyy kirjautumisnäkymään:
 
-<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/login.png" width="300">
+<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/login.png" width="400">
 
 Voit kirjautua sovellukseen kirjoittamalla olemassaoleva käyttäjätunnus ja painamalla 'Kirjaudu'.
 
@@ -28,7 +28,7 @@ Kirjautumisnäkymästä on mahdollista siirtyä uuden käyttäjän luomisnäkym�
 
 Uusi käyttäjä luodaan syöttämällä haluama käyttäjätunnus tekstikenttään ja painamalla 'Valmis'
 
-<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/register.png" width="300">
+<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/register.png" width="400">
 
 Jos käyttäjän luominen onnistuu, ohjelma jatkaa itse sovellukseen juuri rekistöröidyllä käyttäjätunnuksella sisäänkirjautuneena.
 
@@ -36,7 +36,7 @@ Jos käyttäjän luominen onnistuu, ohjelma jatkaa itse sovellukseen juuri rekis
 
 Onnistuneen kirjautumisen tai rekisterlinnin myötä siirrytään käyttäjien tekemättömät työt listaavaan näkymään
 
-<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/application.png" width="300">
+<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/application.png" width="400">
 
 Näkymässä on mahdollista lisätä tuloja ja menoja omaan budjettiin syöttämällä rahamäärä tekstikenttään. Huomio: Määrän tulee 
 olla kokonaisluku, muuten sovellus ei hyväksy tuloa/menoa. Tämän jälkeen näkymässä on mahdollista nähdä oma rahankulutus 
