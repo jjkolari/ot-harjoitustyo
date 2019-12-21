@@ -15,5 +15,5 @@
 | 17.12. | 5 | Tietokannan lisäys |
 | 18.12 | 6 | Dokumentointi ja ohjelman parantelu |
 | 19.12 | 4 | Tietokantataulun "Transactions lisäys", budgetService kehittäminen |
-| 21.12 | x | Loppuviimeistely |
-| yht   | 37 | | 
+| 21.12 | 10 | Loppuviimeistely |
+| yht   | 58 | | 
