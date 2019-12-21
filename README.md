@@ -4,6 +4,8 @@ Sovelluksen avulla on mahdollista seurata omia tuloja. Sovellukseen lisätään 
 
 ## Dokumentaatio
 
+[Käyttöohje](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/kayttoohje.md)
+
 [Vaatimusmäärittely](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/tuntikirjanpito.md)
