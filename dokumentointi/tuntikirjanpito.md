@@ -13,5 +13,7 @@
 | 9.12. | 4 | Tietokantiohin tutustumista ja tilastojen lisäys |
 | 10.12. | 4 | Javadoc ja tietokantoihin tutustumista |
 | 17.12. | 5 | Tietokannan lisäys |
-| 18.12 | x | Dokumentointi |
+| 18.12 | 6 | Dokumentointi ja ohjelman parantelu |
+| 19.12 | 4 | Tietokantataulun "Transactions lisäys", budgetService kehittäminen |
+| 21.12 | x | Loppuviimeistely |
 | yht   | 37 | | 
