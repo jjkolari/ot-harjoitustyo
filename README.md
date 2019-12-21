@@ -16,6 +16,8 @@ Sovelluksen avulla on mahdollista seurata omia tuloja. Sovellukseen lisätään 
 
 [Viikko 5](https://github.com/jjkolari/ot-harjoitustyo/releases/tag/viikko5)
 
+[Loppupalautus](https://github.com/jjkolari/ot-harjoitustyo/releases/tag/loppupalautus)
+
 ## Komentorivitoiminnot
 
 ### Testaus
