@@ -4,7 +4,7 @@
 
 Ohjelman rakenne on jaettu kolmeen pakkaukseen:
 
-<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/pakkaukset.png">
+<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/pakkaukset.png" width="300">
 
 * Pakkaus *budjettisovellus.ui* sisältää käyttöliittymän
 * Pakkaus *budjettisovellus.domain* sisältää sovelluslogiikan
