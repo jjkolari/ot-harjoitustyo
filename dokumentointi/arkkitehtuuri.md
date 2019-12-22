@@ -2,14 +2,19 @@
 
 ## Rakenne
 
-Ohjelman rakenne noudattelee kolmen pa
+Ohjelman rakenne on jaettu kolmeen pakkaukseen:
 
 <img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/pakkaukset.png">
 
+* Pakkaus *budjettisovellus.ui* sisältää käyttöliittymän
+* Pakkaus *budjettisovellus.domain* sisältää sovelluslogiikan
+* Pakkaus *budjettisovellus.dao* sisältää tietokannan
+
+Riippuvuudet on merkitty katkoviivanuolilla.
+
 ## Käyttöliittymä
 
-Käyttöliittymä sisältää yhden näkymän
-- ...
+
 
 Jotain näistä näkymistä...
 
