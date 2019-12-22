@@ -31,22 +31,18 @@ Luokkien suhteita kuvaava luokka/pakkauskaavio:
 
 ## Tietojen pysyväistallennus
 
-...
-
-### Tiedostot
-
+Tiedot tallennetaan BudjettiSovellus.db tietokantaan kahtena eri tietokantatauluna: *User* ja *Transact*. Luokka DatabaseDao huolehtii tietokannasta, luokka UserDao huolehtii tietokantatauluun User tapahtuvista muutoksista ja luokka TransactDao huolehtii tietokantatauluun TransactDao tapahtuvista muutoksista.
 
 ### Päätoiminnallisuudet
 
-#### Käyttäjä lisää tulon
+### Käyttäjä rekisteröityy
+
+### Käyttäjä kirjautuu sisään
 
 <img src="https://raw.githubusercontent.com/jjkolari/ot-harjoitustyo/master/dokumentointi/addIncome.png" width="500">
 
 ...
 
-## Ohjelman rakenteeseen jääneet heikkoudet
+### Käyttäjä lisää tulon
 
-### käyttöliittymä
-
-...
-
+### Käyttäjä lisää menon
