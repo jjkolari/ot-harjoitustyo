@@ -39,7 +39,7 @@ Tiedot tallennetaan BudjettiSovellus.db tietokantaan kahtena eri tietokantataulu
 
 ### Käyttäjä kirjautuu sisään
 
-<img src="https://raw.githubusercontent.com/jjkolari/ot-harjoitustyo/master/dokumentointi/kirjautuminen.png" width="500">
+<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/kirjautuminen.png" width="500">
 
 ...
 
