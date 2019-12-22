@@ -14,13 +14,14 @@ Riippuvuudet on merkitty katkoviivanuolilla.
 
 ## Käyttöliittymä
 
+Käyttöliittymä sisältää neljä erillistä näkymää: *kirjautuminen, rekisteröityminen, sovellus* ja *analyysi*.
 
-
-Jotain näistä näkymistä...
+Näkymät luodaan omissa metodeissaan ja ovat toteutettu omina *Scene*-olioinaan. Käyttöliittymä löytyy luokasta 
+[BudjettiUi](https://github.com/jjkolari/ot-harjoitustyo/blob/master/BudjettiSovellus/src/main/java/budjettisovellus/ui/BudjettiUi.java).
 
 ## Sovelluslogiikka
 
-Tänne luokka/pakkauskaavio
+
 
 ## Tietojen pysyväistallennus
 
