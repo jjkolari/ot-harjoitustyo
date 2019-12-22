@@ -4,7 +4,7 @@ Lataa tiedosto [budjettisovellus.jar](https://github.com/jjkolari/ot-harjoitusty
 
 ## Konfigurointi
 
-Ohjelmaan ei tarvitse konfigurointia, sillä ohjelman käyttämä tietokanta users.db luodaan, jos se puuttuu.
+Ohjelmaan ei tarvitse konfigurointia, sillä ohjelman käyttämä tietokanta BudjettiSovellus.db luodaan, jos se puuttuu.
 
 ## Ohjelman käynnistäminen
 
