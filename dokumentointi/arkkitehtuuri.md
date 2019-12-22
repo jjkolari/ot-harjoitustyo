@@ -2,7 +2,7 @@
 
 ## Rakenne
 
-Ohjelman rakenne noudattelee...
+Ohjelman rakenne noudattelee kolmen pa
 
 Kuva tähän
 
