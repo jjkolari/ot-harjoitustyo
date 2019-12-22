@@ -4,7 +4,7 @@
 
 Ohjelman rakenne noudattelee kolmen pa
 
-Kuva tähän
+<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/pakkaukset.png">
 
 ## Käyttöliittymä
 
