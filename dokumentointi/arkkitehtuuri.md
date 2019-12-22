@@ -21,7 +21,13 @@ Näkymät luodaan omissa metodeissaan ja ovat toteutettu omina *Scene*-olioinaan
 
 ## Sovelluslogiikka
 
+Sovelluslogiikan datan muodostaa kaksi luokkaa *User* ja *Transaction*. Niiden väliset riippuvuudet:
 
+<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/sovelluslogiikka.png"
+
+Luokkien suhteita kuvaava luokka/pakkauskaavio:
+
+<img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/luokat.png"
 
 ## Tietojen pysyväistallennus
 
