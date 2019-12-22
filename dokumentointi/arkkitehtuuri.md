@@ -41,7 +41,7 @@ Tiedot tallennetaan BudjettiSovellus.db tietokantaan kahtena eri tietokantataulu
 
 <img src="https://github.com/jjkolari/ot-harjoitustyo/blob/master/dokumentointi/nakymat/kirjautuminen.png" width="800">
 
-...
+Edit: kirjoitusvirhe: null sijasta User
 
 ### Käyttäjä lisää tulon
 
